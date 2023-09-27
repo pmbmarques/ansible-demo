@@ -8,7 +8,7 @@ pipeline {
         stage('Ansible-Playbook Execution') {
             steps {
                 echo 'Executing Ansible Playbook'
-                ansiblePlaybook colorized: true, credentialsId: 'ansible_user_auth', installation: 'Default', inventory: 'inventory/dynamic.aws_ec2.yml',extras: '-e host_group=\"tag_${TagKey}_${TagValue}\"', playbook: 'playbook/ansible-demo-pb.yaml'
+                ansiblePlaybook colorized: true, credentialsId: '65d9990f-2dd7-4692-b18a-5652fd8be076', installation: 'Default', inventory: 'inventory/dynamic.aws_ec2.yml', playbook: 'playbook/ansible-demo-pb.yaml'
             }
         }
     }
